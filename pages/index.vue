@@ -1,7 +1,7 @@
 <template>
     <div>
       <h1>Cinema - Home</h1>
-      <p>lorem ipsum</p>
+      <NuxtLink to="/room">Book seats</NuxtLink>
     </div>
   </template>
   
