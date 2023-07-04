@@ -3,12 +3,8 @@
         <NuxtLink to="/">Return home</NuxtLink>
         <h1>Room One</h1>
         <h3>Chairs</h3>
-        <p>chair1</p>
-        <p>status: </p>
-        <button>Reserve</button>
-        <p>chair2</p>
-        <p>status: </p>
-        <button>Reserve</button>
+        <chair/>
+        <chair/>
     </div>
 </template>
 
