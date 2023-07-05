@@ -5,6 +5,9 @@
         <button onclick="increase()">Reserve</button>
     </div>
   </template>
+
+
+
 <script setup>
 let status;
 let count = 0;
@@ -26,6 +29,5 @@ switch(count){
     default:
         status = "free";
         break;
-        
 }
 </script>
