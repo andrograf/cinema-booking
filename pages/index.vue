@@ -1,12 +1,15 @@
 <template>
     <div>
       <h1>Home</h1>
-      <NuxtLink to="/room/{room_id}">Book seats</NuxtLink>
+      <div v-for="r in rooms">
+        <NuxtLink to="/room/{{r.roomId}}">Book seats</NuxtLink>
+      </div>
     </div>
   </template>
   
 <script setup>
- // const {data: room_id} = await useFetch('')
+ const {data: rooms} = await useFetch('~/server/api/room')
+
 
 </script>
   
