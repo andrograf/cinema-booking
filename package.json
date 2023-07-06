@@ -12,7 +12,8 @@
     "@nuxt/devtools": "latest",
     "@types/node": "^18",
     "nuxt": "^3.6.1",
-    "prisma": "^4.16.2"
+    "prisma": "^4.16.2",
+    "typescript": "^5.1.6"
   },
   "dependencies": {
     "@prisma/client": "^4.16.2"
