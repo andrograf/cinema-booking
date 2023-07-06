@@ -7,5 +7,5 @@ generator client {
 
 datasource db {
   provider = "mysql"
-  url      = env("mysql://root:sudo1234@localhost:3000/cinema")
+  url      = env("DATABASE_URL")
 }
