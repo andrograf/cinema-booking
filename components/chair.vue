@@ -8,7 +8,7 @@
                     <button >Add to cart</button>
                 </div>
                 <div v-if="s.status == 'foglalt'">
-                    <button v-bind:disabled="true">Not available</button>
+                    <button v-bind:disabled="true" title="Check back later!">Not available</button>
                 </div>
                 <div v-if="s.status == 'eladva'">
                     <button v-bind:disabled="true">sold out</button>
