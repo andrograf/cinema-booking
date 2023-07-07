@@ -11,6 +11,4 @@
 
 <script setup>
  const {data: rooms} = await useFetch('/api/room');
- const {data: seats} = await useFetch('/api/seat');
-
 </script>

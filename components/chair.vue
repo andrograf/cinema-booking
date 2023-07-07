@@ -2,7 +2,7 @@
     <div v-for="r in rooms">
         <div v-for="s in seats">
             <div v-if="s.roomId == r.roomId">
-                <p>{{s.chairId}}.chair</p>
+                <p>{{s.name}}</p>
                 <p>status: {{s.status}}</p>
                 <div v-if="s.status == 'szabad'">
                     <button >Add to cart</button>
