@@ -3,11 +3,11 @@ import { PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient()
 
 async function main() {
-  const chairs = await prisma.chair.findMany()
-  console.log(chairs)
-  return chairs
+  const seats = await prisma.chair.findMany()
+  console.log(seats)
+  return seats
 }
-
+//main()
 export default defineEventHandler(async (event) => {
   const data = main()
   .then(async (r) => {

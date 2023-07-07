@@ -5,7 +5,7 @@ const prisma = new PrismaClient()
 
 async function main() {
   const rooms = await prisma.room.findMany()
-  console.log(rooms)
+  //console.log(rooms)
   return rooms
 }
 
