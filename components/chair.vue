@@ -1,33 +1,20 @@
 <template>
     <div>
-        <p>chair</p>
+        <p>{{chairNum}}.chair</p>
         <p>status: {{status}}</p>
-        <button onclick="increase()">Reserve</button>
+        <div v-if="status == 'szabad'">
+            <button >Add to cart</button>
+        </div>
+        <div v-if="status == 'foglalt'">
+            <button v-bind:disabled="true">Not available</button>
+        </div>
+        <div v-if="status == 'eladva'">
+            <button v-bind:disabled="true">sold out</button>
+        </div>
     </div>
-  </template>
+</template>
 
 
 
 <script setup>
-let status;
-let count = 0;
-function increase(){
-    count++;
-    alert(count);
-}
-function reset(){
-    count = 0;
-}
-switch(count){
-    case 1:
-        status = "reserved";
-        setTimeout(reset, 120000);
-        break;
-    case 2:
-        status = "sold";
-        break;
-    default:
-        status = "free";
-        break;
-}
 </script>

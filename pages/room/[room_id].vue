@@ -1,13 +1,22 @@
 <template>
     <div>
-        <h1>Room One</h1>
+        <div v-for="r in rooms">
+            <h1>{{ r.name }}</h1>
+        </div>
         <h3>Chairs</h3>
-        <chair/>
-        <chair/>
+        <div v-for="ch in chairs">
+            <div v-for="r in rooms">
+                <div v-if="ch.roomId == r.roomId">
+                    <chair status="{{ ch.status }}" chairNum="{{ chair.chairId }}"/>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
 <script setup>
+ const {data: rooms} = await useFetch('/api/room');
+ const {data: chairs} = await useFetch('/');
 
 </script>
 
