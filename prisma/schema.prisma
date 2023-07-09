@@ -1,0 +1,30 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Room {
+  roomId    Int   @db.Int  @id @default(autoincrement()) @map("room_id")
+  name  String  @unique  @db.VarChar(45)
+  chairs Chair[]
+}
+
+model Chair {
+  chairId    Int   @db.Int  @id @default(autoincrement()) @map("chair_id")
+  name  String     @db.VarChar(45)
+  status String     @db.VarChar(45)     @default("szabad")
+  reservationStartDate DateTime?    @db.DateTime() @map("reservation_startdate")
+  reservationEndDate DateTime?     @db.DateTime() @map("reservation_enddate")
+  room Room @relation(fields: [roomId], references: [roomId])
+  roomId Int @db.Int @map("room_id")
+
+  @@index(fields: [roomId], name: "room_id_idx")
+}
+
